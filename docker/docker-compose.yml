@@ -1,0 +1,38 @@
+version: "3"
+services:
+  node12:
+    container_name: node12
+    image: node12
+    ports:
+      - "8888:8888"
+    volumes:
+      - /home/mikael/dev/perso/node-api:/usr/src/app
+    # networks:
+    #   - node-dev-network
+#   mongo:
+#     image: mongo
+#     restart: always
+#     environment:
+#       - MONGO_INITDB_ROOT_USERNAME=root
+#       - MONGO_INITDB_ROOT_PASSWORD=root
+#     networks:
+#       - node-dev-network
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - /home/mikael/dev/mongo:/data/db
+#     networks:
+#       - node-dev-network
+#   mongo-express:
+#     image: mongo-express
+#     restart: always
+#     ports:
+#       - "8081:8081"
+#     environment:
+#       ME_CONFIG_MONGODB_ADMINUSERNAME: root
+#       ME_CONFIG_MONGODB_ADMINPASSWORD: root
+#     networks:
+#       - node-dev-network
+# networks:
+#   node-dev-network:
+#     driver: bridge
